@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isPal(int n){
+    int rev = 0;
+    int temp = n;
+    while(temp != 0){
+        int ld = temp%10;
+        rev = rev*10 + ld;
+        temp = temp/10;
+    }
+    return(rev==n);
+}
+int main(){
+    int n;
+    cin >> n;
+    cout << isPal(n) << endl;
+    return 0;
+}
+
+// Time Complexity is theta(d) where d is the no. of digits
