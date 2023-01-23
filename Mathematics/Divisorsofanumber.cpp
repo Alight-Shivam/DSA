@@ -31,7 +31,7 @@ void PrintDivisors(int n){
 
 void printDIvisors(int n){
     int i;
-    for (int i = 1; i*i < n; i++){
+    for (int i = 1 ; i*i < n; i++){
         if(n%i==0){
             cout << i;
         }
