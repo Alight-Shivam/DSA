@@ -9,7 +9,7 @@ int maxProfit( int price[], int n){
         {
             profit += (price[i] - price[i-1]);
         }
-        return profit;
+     
     }
-    
+     return profit;  
 }
