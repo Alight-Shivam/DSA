@@ -16,7 +16,7 @@ class Hero{
     name = new char[100];
    }
 
-    // PArameterised Constructor
+    // Parameterised Constructor
     Hero(int health){
        this -> health = health;
     }
@@ -28,13 +28,20 @@ class Hero{
 
 // Copy Constructor
 Hero(Hero& temp){
+    char *ch = new char[strlen(temp.name) + 1];
+    strcpy(ch, temp.name);
+    this->name = ch;
+    cout << "Copy constructor called" << endl;
      this -> level = temp.level;
        this -> health = temp.health;
 }
     void print(){
-        cout<<level<< endl;
+        cout << endl;
+        cout << "[ Name: " << this->name << " ,";
+        cout << level << endl;
         cout << "health " << this->health << endl;
-        cout << "level " << this->level << endl;
+        cout << "level " << this->level << " ]"; 
+        cout << endl;
     }
 
     int getHealth(){
@@ -50,19 +57,32 @@ Hero(Hero& temp){
     void setlevel(char ch){
         level = ch;
     }
+
+    void setName(char name[]){
+        strcpy(this->name, name);
+    }
 };
 // 1 byte memory is allocated to the instance of object created for keeping the track of it or for identifying it
 int main(){
 
+Hero hero1;
+hero1.setHealth(12);
+hero1.setlevel('A');
+char Name[8] = "Alight";
+hero1.setName(Name);
 
+// Use default copy constructor
+Hero hero2(hero1);
+hero2.print();
+// Hero hero2 = hero1;
 
-Hero S(70, 'C');
-S.print();
+// Hero S(70, 'C');
+// S.print();
  
- //Copy Constructor
-Hero R(S);
-R.print();
-    //Static Allocation
+// Copy Constructor
+// Hero R(S);
+// R.print();
+    // Static Allocation
     // Hero a;
 //     Hero ramesh(10);
 // cout << "Address of ramesh" << &ramesh << endl;
@@ -75,7 +95,7 @@ R.print();
 // cout << "level is " << a.level << endl;
 // cout << "health is " << a.getHealth() << endl;
 
-//     // Dynamic Allocation
+ // Dynamic Allocation
 //     Hero *b = new Hero;
 //     b->setlevel('A');
 //     b->setHealth(70);
