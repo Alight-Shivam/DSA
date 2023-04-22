@@ -1,17 +1,17 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-void printNto1(int n)
+void print1toN(int n)
 {
     if (n == 0)
         return;
     cout << n << " ";
-    printNto1(n - 1);
+    print1toN(n - 1);
 }
 
 int main()
 {
     int n = 4;
-    printNto1(n);
+    print1toN(n);
     return 0;
 }
