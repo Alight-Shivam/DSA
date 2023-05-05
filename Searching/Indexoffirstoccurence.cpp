@@ -15,7 +15,7 @@ int bSearch(int arr[],int n,int x){
             if(mid==0 || arr[mid-1] != arr [mid])
             return mid;
             else
-            high = mid-1;
+            high = mid+1;  // or high = mid-1;
         }
     }
     return -1;
@@ -24,6 +24,6 @@ int bSearch(int arr[],int n,int x){
 int main()
     {
         int arr[] = {5, 7, 7, 7, 9, 13};
-        cout << bSearch(arr, 6, 9);
+        cout << bSearch(arr, 6, 7);
         return 0;
     }
