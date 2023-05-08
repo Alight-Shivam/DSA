@@ -8,5 +8,5 @@ using namespace std;
     i=i*2;
     if(arr[i]==x)return i;
 
-return binarySearch(arr,x,i/2+1,i)    
+return binarySearch(arr,x,i/2+1,i-1)    
  }
