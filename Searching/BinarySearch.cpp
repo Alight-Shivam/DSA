@@ -44,6 +44,6 @@ int bSearch(int arr[],int n,int x){
 //     {
 //         cout<< bSearch(arr,n)<<" ";
 //     }
-//     return 0;
+//     return 0; 
     
 // }
