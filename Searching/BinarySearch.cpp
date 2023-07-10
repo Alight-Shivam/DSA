@@ -19,7 +19,7 @@ int bSearch(int arr[],int n,int x){
 
 // Recursive Approach
 int bSearch(int arr[],int n,int x){
-    
+    int low = 0, high =n-1, int x;
         if(low>high) return -1; 
         else{
         int mid = (low+high)/2;
