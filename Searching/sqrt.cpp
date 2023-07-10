@@ -36,15 +36,13 @@ double morePrecision(int n, int precision, int tempSol){
     }
     return ans;
 }
-    int mySqrt(int x) {
-        return binarySearch(x);
-          }
+    
 
 int main(){
     int n;
     cout << "Enter the number " << endl;
     cin >> n;
-    int tempSol = mySqrt(n);
+    int tempSol = binarySearch(n);
     cout << " Answer is " << morePrecision(n,3,tempSol) <<endl;
     return 0;
 }
